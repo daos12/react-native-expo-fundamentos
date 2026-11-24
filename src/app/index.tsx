@@ -1,24 +1,46 @@
 import { StyleSheet, Text, View } from 'react-native';
 
 export default function HomeScreen(){
-    return (
+    return(
         <View style={styles.container}>
             <Text style={styles.titulo}>
-                Olá mundo!
+                Meu Primeiro Aplicativo
             </Text>
+
+            <Text style={styles.descricao}>
+                Desenvolvido com React Native.
+            </Text>
+
+            <Text style={styles.autor}>
+                Curso Técnico em Desenvolvimento de Sistemas.
+            </Text>
+
         </View>
+
     );
 }
 
 const styles = StyleSheet.create({
     titulo:{
-        color: 'red',
-        fontSize: 60,
-        fontWeight: 'bold'
+        fontSize: 30,
+        color: '#0F172A',
+        textAlign:'center',
+        marginBottom:20,
+    },
+    descricao:{
+        fontSize: 16,
+        color: '#475569',
+        textAlign:'center',
+    },
+    autor:{
+        fontSize: 13,
+        color: '#9c299c',
+        textAlign:'center',
+        marginTop: 32,
     },
     container:{
         flex: 1,
-        padding: 32,
-        justifyContent: 'center'
+        backgroundColor: "#f1f5f9",
+        padding:24,
     }
 });

@@ -1,46 +1,35 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { ScrollView, StyleSheet, Text } from 'react-native';
+
+import Footer from '@/components/empresa/Footer';
+import Header from '@/components/empresa/Header';
+import Service from '@/components/empresa/Service';
 
 export default function HomeScreen(){
     return(
-        <View style={styles.container}>
-            <Text style={styles.titulo}>
-                Meu Primeiro Aplicativo
-            </Text>
-
-            <Text style={styles.descricao}>
-                Desenvolvido com React Native.
-            </Text>
-
-            <Text style={styles.autor}>
-                Curso Técnico em Desenvolvimento de Sistemas.
-            </Text>
-
-        </View>
-
+        <ScrollView style={styles.container}>
+            <Header/>
+            <Text style={styles.secao }>
+                Nossos Serviços
+                </Text>
+            <Service/>
+            <Footer/>
+        </ScrollView>
     );
 }
 
 const styles = StyleSheet.create({
-    titulo:{
-        fontSize: 30,
-        color: '#0F172A',
-        textAlign:'center',
-        marginBottom:20,
-    },
-    descricao:{
-        fontSize: 16,
-        color: '#475569',
-        textAlign:'center',
-    },
-    autor:{
-        fontSize: 13,
-        color: '#9c299c',
-        textAlign:'center',
-        marginTop: 32,
-    },
-    container:{
-        flex: 1,
-        backgroundColor: "#f1f5f9",
-        padding:24,
-    }
+  container: {
+    flex: 1,
+    backgroundColor: '#F1F5F9',
+    padding: 20
+  },
+  conteudo: {
+    padding: 20,
+  },
+  secao: {
+    fontSize: 22,
+    fontWeight: 'bold',
+    color: '#0F172A',
+    marginTop: 28,
+  },
 });

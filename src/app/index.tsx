@@ -3,6 +3,7 @@ import { ScrollView, StyleSheet, Text } from 'react-native';
 import Footer from '@/components/empresa/Footer';
 import Header from '@/components/empresa/Header';
 import Service from '@/components/empresa/Service';
+import Suporte from '@/components/empresa/SuporteTecnico';
 
 export default function HomeScreen(){
     return(
@@ -12,6 +13,7 @@ export default function HomeScreen(){
                 Nossos Serviços
                 </Text>
             <Service/>
+            <Suporte/>
             <Footer/>
         </ScrollView>
     );
